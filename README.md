@@ -6,7 +6,15 @@ We gaan het spelletje Sokoban in deze repository afmaken. Het maakt niet uit in 
 5. Als laatst, in de "Start" method zorg ervoor dat wanneer het spel afgelopen is (alle dozen staan op een Finish tile) de loop word afgebroken. Je kunt uit de loop springen met return.
 6. Bonus: Een while(true) is eigenlijk niet zo netjes pas de code zo aan dat de conditie in de while lus staat.
 
-Op de plekken waar je iets in moet vullen staat een "NotImplementedException"
+Op de plekken waar je iets in moet vullen staat een "NotImplementedException".
+
+Een paar regels om in gedachten te houden:
+ - Een speler mag niet door een muur bewegen.
+ - Een speler mag maar één doos tegelijk duwen.
+   - Een speler kan dus alleen naar een tegel als deze of leeg is of er een doos opstaat
+   - Een doos kan alleen naar een lege tegel
+   - Als er een doos op de "Destination" staat moet je dus ook controleren of deze doos verplaatst kan worden. Gelukkig is hier een method voor.
+ - Een doos mag ook niet door een muur geduwd worden.
 
 Hieronder staat een (pseudo) klasse diagram van Sokoban.
 
